@@ -14,6 +14,6 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-    repo: lalyos/onlabs
+    all_branches: true
   api-key:
     secure: CZKeoxj5NVuxbJ/8jJ/xBA8GS8JakCS7uQLwt2tDdA3xugEt9KLmGi5CEyloC4U9DiKuEp/CYpsjfXx+Y6nqOXxwyWEGk8M7kCjeXfzadYNjiQnXmJQp/h2tR70MCfpSFqmTrFiAaqc/aoDOGx/5pD1Y8V1MV8KQkV2SbCo5hqo=
