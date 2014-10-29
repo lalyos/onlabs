@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.6 / Unreleased
+## v0.1.6 / 2014-10-29
 
 * Command list volumes
 * Command list snapshots
