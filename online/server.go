@@ -17,3 +17,7 @@ type PublicIp struct {
 	Dynamic bool
 	Address string
 }
+
+type GetServersResp struct {
+	Servers []Server
+}

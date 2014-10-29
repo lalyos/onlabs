@@ -59,3 +59,20 @@ func (c Client) Images() ([]Image, error) {
 
 	return imgRes.Images, nil
 }
+
+func (c Client) Servers() ([]Server, error) {
+
+	body, err := c.getApiResource("servers")
+	if err != nil {
+		return nil, err
+	}
+	//log.Debug(string(body))
+
+	var serRes GetServersResp
+	err = json.Unmarshal(body, &serRes)
+	if err != nil {
+		return nil, err
+	}
+
+	return serRes.Servers, nil
+}

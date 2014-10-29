@@ -11,7 +11,8 @@ const version = "v0.1.5"
 
 func main() {
 	usage := `Usage:
-	online  images [--verbose|-v]
+	onlabs  images  [--verbose|-v]
+	onlabs  servers [--verbose|-v]
 
 Options:
   -h --help         this message
@@ -28,6 +29,10 @@ Options:
 
 	if arguments["images"].(bool) {
 		cmdListImages()
+	}
+
+	if arguments["servers"].(bool) {
+		cmdListServers()
 	}
 
 }
