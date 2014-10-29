@@ -3,6 +3,8 @@
 ## v0.1.7 / Unreleased
 
 * OSX install: `brew cask install onlabs`
+* bash tab completion added
+
 ## v0.1.6 / 2014-10-29
 
 * Command list volumes

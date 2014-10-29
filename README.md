@@ -25,10 +25,20 @@ go get github.com/lalyos/onlin/...
 $ onlabs -h
 
 Usage:
-        onlabs  images  [--verbose|-v]
-        onlabs  servers [--verbose|-v]
+  onlabs  images    [--verbose|-v]
+  onlabs  servers   [--verbose|-v]
+  onlabs  volumes   [--verbose|-v]
+  onlabs  snapshots [--verbose|-v]
 
 Options:
   -h --help         this message
   -v --verbose      verbose mode
+```
+
+## Bash tab completion
+
+If you want **tab completition**, put this into your `.profile` / `.bash_profile`
+
+```
+complete -W "images servers volumes snapshots --version --help" onlabs
 ```
