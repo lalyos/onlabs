@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
-	"os"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/lalyos/onlabs/online"
 )
 
 func cmdListImages() {
-	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
+	cl := online.NewClient()
 	images, err := cl.Images()
 	if err != nil {
 		log.Error(err)
@@ -22,7 +21,7 @@ func cmdListImages() {
 }
 
 func cmdListServers() {
-	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
+	cl := online.NewClient()
 	servers, err := cl.Servers()
 	if err != nil {
 		log.Error(err)
@@ -40,7 +39,7 @@ func sizeInGB(s int) string {
 }
 
 func cmdListVolumes() {
-	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
+	cl := online.NewClient()
 	all, err := cl.Volumes()
 	if err != nil {
 		log.Error(err)
@@ -53,7 +52,7 @@ func cmdListVolumes() {
 }
 
 func cmdListSnapshots() {
-	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
+	cl := online.NewClient()
 	all, err := cl.Snapshots()
 	if err != nil {
 		log.Error(err)
@@ -66,7 +65,7 @@ func cmdListSnapshots() {
 }
 
 func cmdListIPs() {
-	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
+	cl := online.NewClient()
 	all, err := cl.IPs()
 	if err != nil {
 		log.Error(err)

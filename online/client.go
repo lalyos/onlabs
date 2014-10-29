@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 
 	log "github.com/Sirupsen/logrus"
 )
@@ -14,7 +15,11 @@ type Client struct {
 	client *http.Client
 }
 
-func NewClient(token string) Client {
+func NewClient() Client {
+	return NewClientWithToken(os.Getenv("ONLINE_TOKEN"))
+}
+
+func NewClientWithToken(token string) Client {
 	c := Client{
 		Token:  token,
 		client: &http.Client{},

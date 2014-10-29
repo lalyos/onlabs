@@ -36,6 +36,16 @@ Options:
   -v --verbose      verbose mode
 ```
 
+## Authentication
+
+You need **token** to authorize the tool to call the API. You can manage the
+tokens on the [credentials](https://cloud.online.net/#/credentials) page. Once
+you have it set it as an environment variable:
+
+```
+export ONLINE_TOKEN=a0635283-123a-b456-90cd-0123456abcdef
+```
+
 ## Bash tab completion
 
 If you want **tab completition**, put this into your `.profile` / `.bash_profile`
