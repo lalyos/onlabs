@@ -18,4 +18,5 @@ deploy:
   - onlabs_windows_amd64.exe
   skip_cleanup: true
   on:
+    tags: true
     repo: lalyos/onlabs
