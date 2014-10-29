@@ -19,6 +19,9 @@ If you have go installed, then the `go get` will install it to
 go get github.com/lalyos/onlin/...
 ```
 
+## Demo
+
+![Demo](http://g.recordit.co/83sigBNeaM.gif)
 # Usage
 
 ```
