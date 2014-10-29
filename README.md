@@ -25,7 +25,8 @@ go get github.com/lalyos/onlin/...
 $ onlabs -h
 
 Usage:
-        online  images [--verbose|-v]
+        onlabs  images  [--verbose|-v]
+        onlabs  servers [--verbose|-v]
 
 Options:
   -h --help         this message
