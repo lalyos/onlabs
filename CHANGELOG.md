@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.7 / Unreleased
+## v0.1.7 / 2014-10-30
 
 * Command list ips added
 * Command actions added
