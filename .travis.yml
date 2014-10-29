@@ -1,16 +1,21 @@
 language: go
 go:
 - 1.3
+env:
+- "PATH=/home/travis/gopath/bin:$PATH"
+before_install:
+- go get github.com/mitchellh/gox
+- gox -build-toolchain
 after_success:
-- GOOS=linux go build -o onlabs-linux
-- GOOS=darwin go build -o onlabs-darwin
+- gox -osarch="linux/amd64 darwin/amd64 windows/amd64"
 deploy:
   provider: releases
   api_key:
     secure: Z3qJZP3qYNPJ/Qk3sG+dPrd1ufy5/lUc27L8f/+sb5ruXpScQPszgkYeLD7Ro9sBO5iHlV6tz5pQFUrW/DzzntWiyrvlkz651ngA/Y1Kw0XtFdp1PYeIXAHQkcLWbfumyxgIVOyQ9JYLS2YxI3p7ZWcDb4GBlqBqTxurMYkYDD4=
   file:
-  - onlabs-linux
-  - onlabs-darwin
+  - onlabs_darwin_amd64
+  - onlabs_linux_amd64
+  - onlabs_windows_amd64.exe
   skip_cleanup: true
   on:
     repo: lalyos/onlabs
