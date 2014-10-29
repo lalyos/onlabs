@@ -1,3 +1,3 @@
 #!/bin/bash
 
-complete -W "images servers volumes snapshots --version --help" onlabs
+complete -W "images servers volumes snapshots ips --version --help" onlabs

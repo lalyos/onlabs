@@ -110,3 +110,20 @@ func (c Client) Snapshots() ([]Snapshot, error) {
 
 	return resp.Snapshots, nil
 }
+
+func (c Client) IPs() ([]IP, error) {
+
+	body, err := c.getApiResource("ips")
+	if err != nil {
+		return nil, err
+	}
+	log.Debugf("API resp: %s", string(body))
+
+	var resp GetIPsResp
+	err = json.Unmarshal(body, &resp)
+	if err != nil {
+		return nil, err
+	}
+
+	return resp.IPs, nil
+}

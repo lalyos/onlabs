@@ -64,3 +64,16 @@ func cmdListSnapshots() {
 		fmt.Printf(" %-20s %s %10s\n", o.Name, o.Id, sizeInGB(o.Size))
 	}
 }
+
+func cmdListIPs() {
+	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
+	all, err := cl.IPs()
+	if err != nil {
+		log.Error(err)
+		return
+	}
+
+	for _, o := range all {
+		fmt.Printf(" %-20s %s %10s\n", o.Address, o.Id)
+	}
+}

@@ -15,6 +15,7 @@ func main() {
   onlabs  servers   [--verbose|-v]
   onlabs  volumes   [--verbose|-v]
   onlabs  snapshots [--verbose|-v]
+  onlabs  ips       [--verbose|-v]
 
 Options:
   -h --help         this message
@@ -43,6 +44,10 @@ Options:
 
 	if arguments["snapshots"].(bool) {
 		cmdListSnapshots()
+	}
+
+	if arguments["ips"].(bool) {
+		cmdListIPs()
 	}
 
 }

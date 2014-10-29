@@ -29,6 +29,7 @@ Usage:
   onlabs  servers   [--verbose|-v]
   onlabs  volumes   [--verbose|-v]
   onlabs  snapshots [--verbose|-v]
+  onlabs  ips       [--verbose|-v]
 
 Options:
   -h --help         this message
@@ -40,5 +41,5 @@ Options:
 If you want **tab completition**, put this into your `.profile` / `.bash_profile`
 
 ```
-complete -W "images servers volumes snapshots --version --help" onlabs
+complete -W "images servers volumes snapshots ips --version --help" onlabs
 ```

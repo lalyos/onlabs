@@ -2,6 +2,7 @@
 
 ## v0.1.7 / Unreleased
 
+* Command list ips added
 * OSX install: `brew cask install onlabs`
 * bash tab completion added
 * Volume and Snapshot sizes are displayed in GB
