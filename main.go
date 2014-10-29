@@ -1,33 +1,31 @@
 package main
 
 import (
-	"fmt"
-	"os"
-
 	log "github.com/Sirupsen/logrus"
-	"github.com/lalyos/online/onlabs"
+	docopt "github.com/docopt/docopt-go"
 )
 
 func init() {
-	if os.Getenv("DEBUG") != "" {
-		log.SetLevel(log.DebugLevel)
-	}
-}
-
-func listImages() {
-	cl := onlabs.NewClient(os.Getenv("ONLINE_TOKEN"))
-	images, err := cl.Images()
-	if err != nil {
-		log.Error(err)
-		return
-	}
-
-	for _, i := range images {
-		fmt.Printf(" %-40s %s\n", i.Name, i.Id)
-	}
 }
 
 func main() {
-	fmt.Println("Online Labs Client v0.1.0")
-	listImages()
+	usage := `Usage:
+	onlabs  images [--verbose|-v]
+
+Options:
+  -h --help         this message
+  -v --verbose      verbose mode`
+
+	arguments, _ := docopt.Parse(usage, nil, true, "Online Labs Client: v0.1.0", false)
+
+	if arguments["--verbose"].(bool) {
+		log.SetLevel(log.DebugLevel)
+	}
+
+	log.Debugf("args: %v", arguments)
+
+	if arguments["images"].(bool) {
+		cmdListImages()
+	}
+
 }
