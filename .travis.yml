@@ -7,13 +7,10 @@ after_success:
 deploy:
   provider: releases
   api_key:
-    secure: 1sHD4cMNb+llPyCUDQC2hIk0r8QCqiRcNYMvBtXMbXQpUs8oG/J0gZpp0NLsZ3SMMktjLb5oxLD84BP8JSipbvQ/VvfmtAtv08LRJ+IMAd+9Qbg7I1Vd7CeiqVQ7Acb2ljpvRhGfmJ6oddCsBboD8cnaC9CjN3UqlBaHm/9nvJo=
+    secure: Z3qJZP3qYNPJ/Qk3sG+dPrd1ufy5/lUc27L8f/+sb5ruXpScQPszgkYeLD7Ro9sBO5iHlV6tz5pQFUrW/DzzntWiyrvlkz651ngA/Y1Kw0XtFdp1PYeIXAHQkcLWbfumyxgIVOyQ9JYLS2YxI3p7ZWcDb4GBlqBqTxurMYkYDD4=
   file:
   - onlabs-linux
   - onlabs-darwin
   skip_cleanup: true
   on:
-    tags: true
-    all_branches: true
-  api-key:
-    secure: CZKeoxj5NVuxbJ/8jJ/xBA8GS8JakCS7uQLwt2tDdA3xugEt9KLmGi5CEyloC4U9DiKuEp/CYpsjfXx+Y6nqOXxwyWEGk8M7kCjeXfzadYNjiQnXmJQp/h2tR70MCfpSFqmTrFiAaqc/aoDOGx/5pD1Y8V1MV8KQkV2SbCo5hqo=
+    repo: lalyos/onlabs
