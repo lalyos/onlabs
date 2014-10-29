@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.6 / Unreleased
+
+* Command list volumes
+* Command list snapshots
+
 ## v0.1.5 / 2014-10-29
 
 * Command list images
