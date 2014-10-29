@@ -34,6 +34,11 @@ func cmdListServers() {
 	}
 }
 
+func sizeInGB(s int) string {
+	gb := s / 1000000000
+	return fmt.Sprintf("%d GB", gb)
+}
+
 func cmdListVolumes() {
 	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
 	all, err := cl.Volumes()
@@ -43,7 +48,7 @@ func cmdListVolumes() {
 	}
 
 	for _, o := range all {
-		fmt.Printf(" %-20s %s %16d\n", o.Name, o.Id, o.Size)
+		fmt.Printf(" %-20s %s %10s\n", o.Name, o.Id, sizeInGB(o.Size))
 	}
 }
 
@@ -56,6 +61,6 @@ func cmdListSnapshots() {
 	}
 
 	for _, o := range all {
-		fmt.Printf(" %-20s %s %16d\n", o.Name, o.Id, o.Size)
+		fmt.Printf(" %-20s %s %10s\n", o.Name, o.Id, sizeInGB(o.Size))
 	}
 }
