@@ -93,3 +93,20 @@ func (c Client) Volumes() ([]Volume, error) {
 
 	return resp.Volumes, nil
 }
+
+func (c Client) Snapshots() ([]Snapshot, error) {
+
+	body, err := c.getApiResource("snapshots")
+	if err != nil {
+		return nil, err
+	}
+	//log.Debug(string(body))
+
+	var resp GetSnapshotsResp
+	err = json.Unmarshal(body, &resp)
+	if err != nil {
+		return nil, err
+	}
+
+	return resp.Snapshots, nil
+}

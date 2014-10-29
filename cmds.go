@@ -36,13 +36,26 @@ func cmdListServers() {
 
 func cmdListVolumes() {
 	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
-	volumes, err := cl.Volumes()
+	all, err := cl.Volumes()
 	if err != nil {
 		log.Error(err)
 		return
 	}
 
-	for _, v := range volumes {
-		fmt.Printf(" %-20s %s %16d\n", v.Name, v.Id, v.Size)
+	for _, o := range all {
+		fmt.Printf(" %-20s %s %16d\n", o.Name, o.Id, o.Size)
+	}
+}
+
+func cmdListSnapshots() {
+	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
+	all, err := cl.Snapshots()
+	if err != nil {
+		log.Error(err)
+		return
+	}
+
+	for _, o := range all {
+		fmt.Printf(" %-20s %s %16d\n", o.Name, o.Id, o.Size)
 	}
 }

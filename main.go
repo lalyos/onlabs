@@ -11,9 +11,10 @@ const version = "v0.1.5"
 
 func main() {
 	usage := `Usage:
-	onlabs  images  [--verbose|-v]
-	onlabs  servers [--verbose|-v]
-	onlabs  volumes [--verbose|-v]
+  onlabs  images    [--verbose|-v]
+  onlabs  servers   [--verbose|-v]
+  onlabs  volumes   [--verbose|-v]
+  onlabs  snapshots [--verbose|-v]
 
 Options:
   -h --help         this message
@@ -38,6 +39,10 @@ Options:
 
 	if arguments["volumes"].(bool) {
 		cmdListVolumes()
+	}
+
+	if arguments["snapshots"].(bool) {
+		cmdListSnapshots()
 	}
 
 }
