@@ -13,6 +13,7 @@ func main() {
 	usage := `Usage:
 	onlabs  images  [--verbose|-v]
 	onlabs  servers [--verbose|-v]
+	onlabs  volumes [--verbose|-v]
 
 Options:
   -h --help         this message
@@ -33,6 +34,10 @@ Options:
 
 	if arguments["servers"].(bool) {
 		cmdListServers()
+	}
+
+	if arguments["volumes"].(bool) {
+		cmdListVolumes()
 	}
 
 }

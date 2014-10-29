@@ -33,3 +33,16 @@ func cmdListServers() {
 		fmt.Printf(" %-15s %-15s %s %s\n", s.Name, s.PublicIp.Address, s.Id, s.Image.Name)
 	}
 }
+
+func cmdListVolumes() {
+	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
+	volumes, err := cl.Volumes()
+	if err != nil {
+		log.Error(err)
+		return
+	}
+
+	for _, v := range volumes {
+		fmt.Printf(" %-20s %s %16d\n", v.Name, v.Id, v.Size)
+	}
+}

@@ -76,3 +76,20 @@ func (c Client) Servers() ([]Server, error) {
 
 	return serRes.Servers, nil
 }
+
+func (c Client) Volumes() ([]Volume, error) {
+
+	body, err := c.getApiResource("volumes")
+	if err != nil {
+		return nil, err
+	}
+	//log.Debug(string(body))
+
+	var resp GetVolumesResp
+	err = json.Unmarshal(body, &resp)
+	if err != nil {
+		return nil, err
+	}
+
+	return resp.Volumes, nil
+}
