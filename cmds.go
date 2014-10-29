@@ -29,7 +29,7 @@ func cmdListServers() {
 	}
 
 	for _, s := range servers {
-		fmt.Printf(" %-15s %-15s %s %s\n", s.Name, s.PublicIp.Address, s.Id, s.Image.Name)
+		fmt.Printf("%8s %-15s %-15s %v %s\n", s.State, s.Name, s.PublicIp.Address, s.Id, s.Image.Name)
 	}
 }
 
@@ -73,6 +73,6 @@ func cmdListIPs() {
 	}
 
 	for _, o := range all {
-		fmt.Printf(" %-20s %s %10s\n", o.Address, o.Id)
+		fmt.Printf(" %-20s %10s\n", o.Address, o.Id)
 	}
 }

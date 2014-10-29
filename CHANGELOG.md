@@ -6,6 +6,7 @@
 * OSX install: `brew cask install onlabs`
 * bash tab completion added
 * Volume and Snapshot sizes are displayed in GB
+* State added to Server
 
 ## v0.1.6 / 2014-10-29
 

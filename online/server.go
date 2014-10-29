@@ -9,7 +9,7 @@ type Server struct {
 		Name string
 	}
 	PublicIp PublicIp `json:"public_ip"`
-	Running  bool
+	State    string
 }
 
 type PublicIp struct {
