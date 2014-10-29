@@ -1,12 +1,13 @@
 package main
 
 import (
+	"fmt"
+
 	log "github.com/Sirupsen/logrus"
 	docopt "github.com/docopt/docopt-go"
 )
 
-func init() {
-}
+const version = "v0.1.5"
 
 func main() {
 	usage := `Usage:
@@ -16,7 +17,8 @@ Options:
   -h --help         this message
   -v --verbose      verbose mode`
 
-	arguments, _ := docopt.Parse(usage, nil, true, "Online Labs Client: v0.1.0", false)
+	ver := fmt.Sprintf("Online Labs Client: %s", version)
+	arguments, _ := docopt.Parse(usage, nil, true, ver, false)
 
 	if arguments["--verbose"].(bool) {
 		log.SetLevel(log.DebugLevel)
