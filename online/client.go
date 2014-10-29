@@ -132,3 +132,23 @@ func (c Client) IPs() ([]IP, error) {
 
 	return resp.IPs, nil
 }
+
+type GetActionsResp struct {
+	Actions []string
+}
+
+func (c Client) Actions(serverId string) ([]string, error) {
+	body, err := c.getApiResource(fmt.Sprintf("servers/%s/action", serverId))
+	if err != nil {
+		return nil, err
+	}
+	log.Debugf("API resp: %s", string(body))
+
+	var resp GetActionsResp
+	err = json.Unmarshal(body, &resp)
+	if err != nil {
+		return nil, err
+	}
+
+	return resp.Actions, nil
+}

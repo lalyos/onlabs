@@ -23,13 +23,13 @@ go get github.com/lalyos/onlin/...
 
 ```
 $ onlabs -h
-
 Usage:
   onlabs  images    [--verbose|-v]
   onlabs  servers   [--verbose|-v]
   onlabs  volumes   [--verbose|-v]
   onlabs  snapshots [--verbose|-v]
   onlabs  ips       [--verbose|-v]
+  onlabs  actions --server=IMAGEID  [--verbose|-v]
 
 Options:
   -h --help         this message

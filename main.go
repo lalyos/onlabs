@@ -16,6 +16,7 @@ func main() {
   onlabs  volumes   [--verbose|-v]
   onlabs  snapshots [--verbose|-v]
   onlabs  ips       [--verbose|-v]
+  onlabs  actions --server=IMAGEID  [--verbose|-v]
 
 Options:
   -h --help         this message
@@ -48,6 +49,10 @@ Options:
 
 	if arguments["ips"].(bool) {
 		cmdListIPs()
+	}
+
+	if arguments["actions"].(bool) {
+		cmdListActions(arguments["--server"].(string))
 	}
 
 }

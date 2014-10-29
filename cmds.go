@@ -76,3 +76,16 @@ func cmdListIPs() {
 		fmt.Printf(" %-20s %10s\n", o.Address, o.Id)
 	}
 }
+
+func cmdListActions(serverId string) {
+	cl := online.NewClient()
+	all, err := cl.Actions(serverId)
+	if err != nil {
+		log.Error(err)
+		return
+	}
+
+	for _, o := range all {
+		fmt.Printf(" %-21s\n", o)
+	}
+}
