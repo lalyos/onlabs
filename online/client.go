@@ -49,7 +49,7 @@ func (c Client) Images() ([]Image, error) {
 	if err != nil {
 		return nil, err
 	}
-	//log.Debug(string(body))
+	log.Debugf("API resp: %s", string(body))
 
 	var imgRes GetImagesResp
 	err = json.Unmarshal(body, &imgRes)
@@ -66,7 +66,7 @@ func (c Client) Servers() ([]Server, error) {
 	if err != nil {
 		return nil, err
 	}
-	//log.Debug(string(body))
+	log.Debugf("API resp: %s", string(body))
 
 	var serRes GetServersResp
 	err = json.Unmarshal(body, &serRes)
@@ -83,7 +83,7 @@ func (c Client) Volumes() ([]Volume, error) {
 	if err != nil {
 		return nil, err
 	}
-	//log.Debug(string(body))
+	log.Debugf("API resp: %s", string(body))
 
 	var resp GetVolumesResp
 	err = json.Unmarshal(body, &resp)
@@ -100,7 +100,7 @@ func (c Client) Snapshots() ([]Snapshot, error) {
 	if err != nil {
 		return nil, err
 	}
-	//log.Debug(string(body))
+	log.Debugf("API resp: %s", string(body))
 
 	var resp GetSnapshotsResp
 	err = json.Unmarshal(body, &resp)
