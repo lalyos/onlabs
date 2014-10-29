@@ -1,4 +1,4 @@
-package onlabs
+package online
 
 import (
 	"encoding/json"

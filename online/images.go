@@ -1,4 +1,4 @@
-package onlabs
+package online
 
 type Image struct {
 	Id           string

@@ -5,11 +5,11 @@ import (
 	"os"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/lalyos/online/onlabs"
+	"github.com/lalyos/onlabs/online"
 )
 
 func cmdListImages() {
-	cl := onlabs.NewClient(os.Getenv("ONLINE_TOKEN"))
+	cl := online.NewClient(os.Getenv("ONLINE_TOKEN"))
 	images, err := cl.Images()
 	if err != nil {
 		log.Error(err)

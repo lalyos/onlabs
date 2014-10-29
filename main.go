@@ -10,7 +10,7 @@ func init() {
 
 func main() {
 	usage := `Usage:
-	onlabs  images [--verbose|-v]
+	online  images [--verbose|-v]
 
 Options:
   -h --help         this message
