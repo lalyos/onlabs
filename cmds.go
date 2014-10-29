@@ -89,3 +89,13 @@ func cmdListActions(serverId string) {
 		fmt.Printf(" %-21s\n", o)
 	}
 }
+
+func cmdDoActions(serverId string, action string) {
+	cl := online.NewClient()
+	r, err := cl.DoActions(serverId, action)
+	if err != nil {
+		log.Error(err)
+		return
+	}
+	log.Info(r)
+}

@@ -17,6 +17,7 @@ func main() {
   onlabs  snapshots [--verbose|-v]
   onlabs  ips       [--verbose|-v]
   onlabs  actions --server=IMAGEID  [--verbose|-v]
+  onlabs  reboot  --server=IMAGEID  [--verbose|-v]
 
 Options:
   -h --help         this message
@@ -53,6 +54,10 @@ Options:
 
 	if arguments["actions"].(bool) {
 		cmdListActions(arguments["--server"].(string))
+	}
+
+	if arguments["reboot"].(bool) {
+		cmdDoActions(arguments["--server"].(string), "reboot")
 	}
 
 }

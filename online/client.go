@@ -1,6 +1,7 @@
 package online
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -41,7 +42,29 @@ func (c Client) getApiResource(resName string) ([]byte, error) {
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode != 200 {
+	if resp.StatusCode > 299 {
+		return nil, fmt.Errorf("Status code: %d", resp.StatusCode)
+	}
+	return ioutil.ReadAll(resp.Body)
+}
+
+func (c Client) postApiResource(resName string, json []byte) ([]byte, error) {
+	url := fmt.Sprintf("https://api.cloud.online.net/%s", resName)
+	log.Debugf("url:%q", url)
+	req, err := http.NewRequest("POST", url, bytes.NewBuffer(json))
+
+	req.Header.Set("X-Auth-Token", c.Token)
+	req.Header.Set("Content-Type", "application/json")
+
+	resp, err := c.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	log.Debug(resp.Body)
+
+	if resp.StatusCode > 299 {
 		return nil, fmt.Errorf("Status code: %d", resp.StatusCode)
 	}
 	return ioutil.ReadAll(resp.Body)
@@ -151,4 +174,15 @@ func (c Client) ListActions(serverId string) ([]string, error) {
 	}
 
 	return resp.Actions, nil
+}
+
+func (c Client) DoActions(serverId string, action string) (string, error) {
+	json := fmt.Sprintf(`{"action": "%s"}`, action)
+	body, err := c.postApiResource(fmt.Sprintf("servers/%s/action", serverId), []byte(json))
+	if err != nil {
+		return "", err
+	}
+	log.Debugf("API resp: %s", string(body))
+
+	return string(body), nil
 }

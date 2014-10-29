@@ -4,6 +4,7 @@
 
 * Command list ips added
 * Command actions added
+* Command reboot added
 * OSX install: `brew cask install onlabs`
 * bash tab completion added
 * Volume and Snapshot sizes are displayed in GB

@@ -30,6 +30,7 @@ Usage:
   onlabs  snapshots [--verbose|-v]
   onlabs  ips       [--verbose|-v]
   onlabs  actions --server=IMAGEID  [--verbose|-v]
+  onlabs  reboot --server=IMAGEID  [--verbose|-v]
 
 Options:
   -h --help         this message
@@ -51,5 +52,5 @@ export ONLINE_TOKEN=a0635283-123a-b456-90cd-0123456abcdef
 If you want **tab completition**, put this into your `.profile` / `.bash_profile`
 
 ```
-complete -W "images servers volumes snapshots ips --version --help" onlabs
+complete -W "actions images servers volumes snapshots reboot ips --server --version --help" onlabs
 ```
