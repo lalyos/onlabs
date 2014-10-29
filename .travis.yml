@@ -5,7 +5,7 @@ env:
 - "PATH=/home/travis/gopath/bin:$PATH"
 before_install:
 - go get github.com/mitchellh/gox
-- gox -build-toolchain
+- gox -build-toolchain -osarch="linux/amd64 darwin/amd64 windows/amd64"
 after_success:
 - gox -osarch="linux/amd64 darwin/amd64 windows/amd64"
 deploy:
