@@ -79,7 +79,7 @@ func cmdListIPs() {
 
 func cmdListActions(serverId string) {
 	cl := online.NewClient()
-	all, err := cl.Actions(serverId)
+	all, err := cl.ListActions(serverId)
 	if err != nil {
 		log.Error(err)
 		return

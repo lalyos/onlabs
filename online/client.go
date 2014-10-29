@@ -137,7 +137,7 @@ type GetActionsResp struct {
 	Actions []string
 }
 
-func (c Client) Actions(serverId string) ([]string, error) {
+func (c Client) ListActions(serverId string) ([]string, error) {
 	body, err := c.getApiResource(fmt.Sprintf("servers/%s/action", serverId))
 	if err != nil {
 		return nil, err
