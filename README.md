@@ -52,8 +52,10 @@ export ONLINE_TOKEN=a0635283-123a-b456-90cd-0123456abcdef
 
 ## Bash tab completion
 
-If you want **tab completition**, put this into your `.profile` / `.bash_profile`
+If you want **tab completition**, use the `scripts/onlabs_completion`. You might
+copy its content into your `.profile` / `.bash_profile`
 
+Or if you want to use it in your actual shell:
 ```
-complete -W "actions images servers volumes snapshots reboot ips --server --version --help" onlabs
+curl -Ls j.mp/onlabs_completion | bash
 ```
