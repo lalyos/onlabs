@@ -16,8 +16,8 @@ func main() {
   onlabs  volumes   [--verbose|-v]
   onlabs  snapshots [--verbose|-v]
   onlabs  ips       [--verbose|-v]
-  onlabs  actions --server=IMAGEID  [--verbose|-v]
-  onlabs  reboot  --server=IMAGEID  [--verbose|-v]
+  onlabs  actions --server=SERVERID  [--verbose|-v]
+  onlabs  reboot  --server=SERVERID  [--verbose|-v]
 
 Options:
   -h --help         this message
