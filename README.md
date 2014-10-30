@@ -21,7 +21,7 @@ go get github.com/lalyos/onlin/...
 
 ## Demo
 
-![Demo](http://g.recordit.co/83sigBNeaM.gif)
+![Demo](http://g.recordit.co/v5oS1juTje.gif)
 # Usage
 
 ```
