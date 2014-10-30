@@ -16,7 +16,7 @@ If you have go installed, then the `go get` will install it to
 `$GOPATH/bin`
 
 ```
-go get github.com/lalyos/onlin/...
+go get github.com/lalyos/onlabs/...
 ```
 
 ## Demo
