@@ -1,8 +1,9 @@
 # Changelog
 
-## unreleased
+## v0.1.8 / 2014-11-03
 
 * Fix volumes/napshots command on 32 bit arch
+* Binary release for ARM linux added
 
 ## v0.1.7 / 2014-10-30
 
