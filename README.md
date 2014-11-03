@@ -10,15 +10,6 @@ It also contains a command-line tool, which uses the [Online Labs API](https://d
 
 Linux/Darwin/Windows binaries are released at [github](https://github.com/lalyos/onlabs/releases/latest)
 
-## Install from source
-
-If you have go installed, then the `go get` will install it to
-`$GOPATH/bin`
-
-```
-go get github.com/lalyos/onlabs/...
-```
-
 ## Demo
 
 ![Demo](http://g.recordit.co/v5oS1juTje.gif)
@@ -58,4 +49,13 @@ copy its content into your `.profile` / `.bash_profile`
 Or if you want to use it in your actual shell:
 ```
 curl -Ls j.mp/onlabs_completion | bash
+```
+
+## Install from source
+
+If you want to hack around, you need go installed, then the usual
+`go get` will install it to `$GOPATH/bin`
+
+```
+go get github.com/lalyos/onlabs/...
 ```
