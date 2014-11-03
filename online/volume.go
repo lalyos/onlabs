@@ -4,7 +4,7 @@ type Volume struct {
 	Id           string
 	Name         string
 	Organization string
-	Size         int
+	Size         int64
 }
 
 type GetVolumesResp struct {

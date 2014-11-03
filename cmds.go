@@ -33,7 +33,7 @@ func cmdListServers() {
 	}
 }
 
-func sizeInGB(s int) string {
+func sizeInGB(s int64) string {
 	gb := s / 1000000000
 	return fmt.Sprintf("%d GB", gb)
 }
