@@ -33,7 +33,7 @@ func TestUnmarshallVolume(t *testing.T) {
 		t.Fatalf("Expected %#v, got %#v", exp, d.Organization)
 	}
 
-	expSize := 10000000000
+	expSize := int64(10000000000)
 	if d.Size != expSize {
 		t.Fatalf("Expected %#v, got %#v", expSize, d.Size)
 	}

@@ -1,5 +1,9 @@
 # Changelog
 
+## unreleased
+
+* Fix volumes/napshots command on 32 bit arch
+
 ## v0.1.7 / 2014-10-30
 
 * Command list ips added
