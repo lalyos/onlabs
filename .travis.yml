@@ -5,9 +5,9 @@ env:
 - "PATH=/home/travis/gopath/bin:$PATH"
 before_install:
 - go get github.com/mitchellh/gox
-- gox -build-toolchain -osarch="linux/amd64 darwin/amd64 windows/amd64"
+- gox -build-toolchain -osarch="linux/amd64 darwin/amd64 windows/amd64 linux/arm"
 after_success:
-- gox -osarch="linux/amd64 darwin/amd64 windows/amd64"
+- gox -osarch="linux/amd64 darwin/amd64 windows/amd64 linux/arm"
 deploy:
   provider: releases
   api_key:
@@ -16,6 +16,7 @@ deploy:
   - onlabs_darwin_amd64
   - onlabs_linux_amd64
   - onlabs_windows_amd64.exe
+  - onlabs_linux_arm
   skip_cleanup: true
   on:
     tags: true
