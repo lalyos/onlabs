@@ -23,8 +23,8 @@ Usage:
   onlabs  volumes   [--verbose|-v]
   onlabs  snapshots [--verbose|-v]
   onlabs  ips       [--verbose|-v]
-  onlabs  actions --server=SERVERID  [--verbose|-v]
-  onlabs  reboot  --server=SERVERID  [--verbose|-v]
+  onlabs  actions   --server=SERVERID  [--verbose|-v]
+  onlabs  reboot    --server=SERVERID  [--verbose|-v]
 
 Options:
   -h --help         this message
@@ -59,3 +59,17 @@ If you want to hack around, you need go installed, then the usual
 ```
 go get github.com/lalyos/onlabs/...
 ```
+## Instal on OSX
+
+The most popular package manager on mac is [brew](http://brew.sh).
+Onlab is installable via:
+
+```
+brew cask install onlabs
+```
+
+If you are missing the [cask](http://caskroom.io) plugin, get it by:
+```
+brew install caskroom/cask/brew-cask
+```
+
