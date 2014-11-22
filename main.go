@@ -7,7 +7,7 @@ import (
 	docopt "github.com/docopt/docopt-go"
 )
 
-const version = "v0.1.8"
+const version = "v0.1.9"
 
 func main() {
 	usage := `Usage:

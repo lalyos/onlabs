@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.9 / 2014-11-22
+
+* Command poweron added
+* Command poweroff added
+* Command terminate added
+
 ## v0.1.8 / 2014-11-03
 
 * Fix volumes/napshots command on 32 bit arch
