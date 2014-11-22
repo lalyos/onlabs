@@ -25,6 +25,9 @@ Usage:
   onlabs  ips       [--verbose|-v]
   onlabs  actions   --server=SERVERID  [--verbose|-v]
   onlabs  reboot    --server=SERVERID  [--verbose|-v]
+  onlabs  poweron   --server=SERVERID  [--verbose|-v]
+  onlabs  poweroff  --server=SERVERID  [--verbose|-v]
+  onlabs  terminate --server=SERVERID  [--verbose|-v]
 
 Options:
   -h --help         this message
