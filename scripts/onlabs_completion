@@ -4,4 +4,4 @@ curl -Ls j.mp/onlabs_completion | bash
 ======================================
 USAGE
 
-complete -W "actions images servers volumes snapshots reboot ips --server --version --help" onlabs
+complete -W "poweron poweroff terminate actions images servers volumes snapshots reboot ips --server --version --help" onlabs
