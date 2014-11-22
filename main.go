@@ -16,8 +16,11 @@ func main() {
   onlabs  volumes   [--verbose|-v]
   onlabs  snapshots [--verbose|-v]
   onlabs  ips       [--verbose|-v]
-  onlabs  actions --server=SERVERID  [--verbose|-v]
-  onlabs  reboot  --server=SERVERID  [--verbose|-v]
+  onlabs  actions   --server=SERVERID  [--verbose|-v]
+  onlabs  reboot    --server=SERVERID  [--verbose|-v]
+  onlabs  poweron   --server=SERVERID  [--verbose|-v]
+  onlabs  poweroff  --server=SERVERID  [--verbose|-v]
+  onlabs  terminate --server=SERVERID  [--verbose|-v]
 
 Options:
   -h --help         this message
@@ -58,6 +61,18 @@ Options:
 
 	if arguments["reboot"].(bool) {
 		cmdDoActions(arguments["--server"].(string), "reboot")
+	}
+
+	if arguments["poweron"].(bool) {
+		cmdDoActions(arguments["--server"].(string), "poweron")
+	}
+
+	if arguments["poweroff"].(bool) {
+		cmdDoActions(arguments["--server"].(string), "poweroff")
+	}
+
+	if arguments["terminate"].(bool) {
+		cmdDoActions(arguments["--server"].(string), "terminate")
 	}
 
 }
